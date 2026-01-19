@@ -1,0 +1,106 @@
+{
+    "name": "accelade/grids",
+    "description": "Grid components for Accelade - display data in cards, masonry layouts, and responsive grids",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fady Mondy",
+            "email": "info@3x1.io",
+            "homepage": "https://3x1.io",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/accelade/grids",
+    "keywords": [
+        "laravel",
+        "blade",
+        "accelade",
+        "grids",
+        "cards",
+        "masonry",
+        "gallery"
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../accelade"
+        },
+        {
+            "type": "path",
+            "url": "../query-builder"
+        },
+        {
+            "type": "path",
+            "url": "../filters"
+        },
+        {
+            "type": "path",
+            "url": "../actions"
+        },
+        {
+            "type": "path",
+            "url": "../schemas"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "accelade/accelade": "^1.0.0|dev-main|dev-master",
+        "accelade/query-builder": "^1.0.0|dev-main|dev-master",
+        "accelade/filters": "^1.0.0|dev-main|dev-master",
+        "accelade/actions": "^1.0.0|dev-main|dev-master",
+        "illuminate/support": "^11.0|^12.0",
+        "illuminate/view": "^11.0|^12.0",
+        "illuminate/database": "^11.0|^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Accelade\\Grids\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Accelade\\Grids\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Accelade\\Grids\\GridsServiceProvider"
+            ],
+            "aliases": {
+                "Grid": "Accelade\\Grids\\Facades\\Grid"
+            }
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "pest --coverage",
+        "format": "pint",
+        "format:test": "pint --test",
+        "mago": "./mago lint src/ || mago lint src/",
+        "mago:fix": "./mago lint src/ --fix || mago lint src/ --fix",
+        "analyse": [
+            "@format:test",
+            "@mago"
+        ],
+        "ci": [
+            "@analyse",
+            "@test"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "version": "v1.0.0"
+}
