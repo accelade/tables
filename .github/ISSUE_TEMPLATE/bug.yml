@@ -20,7 +20,7 @@ body:
           required: true
         - label: I have read the [documentation](../docs/)
           required: true
-        - label: I am using the latest version of Accelade Infolists
+        - label: I am using the latest version of Accelade Tables
           required: true
 
   - type: textarea
@@ -70,42 +70,43 @@ body:
       description: If applicable, provide a minimal code sample that reproduces the issue
       render: php
       placeholder: |
-        // Your Infolist definition
-        TextEntry::make('name')
-            ->label('Full Name')
-            ->badge();
+        // Your Table definition
+        Table::make('users')
+            ->columns([
+                TextColumn::make('name')->sortable(),
+            ]);
 
   - type: dropdown
     id: component
     attributes:
       label: Affected Component
-      description: Which part of Accelade Infolists is affected?
+      description: Which part of Accelade Tables is affected?
       multiple: true
       options:
-        - TextEntry Component
-        - BadgeEntry Component
-        - IconEntry Component
-        - ImageEntry Component
-        - ColorEntry Component
-        - RatingEntry Component
-        - ProgressEntry Component
-        - CodeEntry Component
-        - QrCodeEntry Component
-        - KeyValueEntry Component
-        - RepeatableEntry Component
-        - MarkdownEntry Component
-        - HtmlEntry Component
-        - SecretEntry Component
-        - SeparatorEntry Component
-        - Infolist Container
+        - TextColumn Component
+        - BadgeColumn Component
+        - BooleanColumn Component
+        - IconColumn Component
+        - ImageColumn Component
+        - ColorColumn Component
+        - SelectColumn Component
+        - ToggleColumn Component
+        - TextInputColumn Component
+        - CheckboxColumn Component
+        - Table Container
+        - Sorting
+        - Filtering
+        - Pagination
+        - Bulk Actions
+        - JavaScript/TypeScript
         - Blade Views
         - Other
 
   - type: input
-    id: infolists-version
+    id: tables-version
     attributes:
-      label: Accelade Infolists Version
-      description: What version of Accelade Infolists are you using?
+      label: Accelade Tables Version
+      description: What version of Accelade Tables are you using?
       placeholder: "1.0.0"
     validations:
       required: true

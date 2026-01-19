@@ -1,0 +1,19 @@
+{
+    "name": "accelade-tables",
+    "version": "1.0.0",
+    "description": "Accelade Tables - Table components for Laravel with sorting, filtering, and pagination",
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite build --watch",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "terser": "^5.46.0",
+        "typescript": "^5.7.3",
+        "vite": "^7.3.1"
+    },
+    "files": [
+        "dist"
+    ]
+}

@@ -323,7 +323,7 @@ class Table
      */
     public function fromRequest(?array $data = null): static
     {
-        $data = $data ?? request()->all();
+        $data ??= request()->all();
 
         // Apply search
         if (isset($data[$this->getSearchInputName()])) {

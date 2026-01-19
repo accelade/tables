@@ -26,7 +26,7 @@ Instead, please report them via one of the following methods:
 
 2. **Email**
    - Send an email to: security@example.com (replace with actual email)
-   - Use the subject line: `[SECURITY] Accelade Infolists Vulnerability Report`
+   - Use the subject line: `[SECURITY] Accelade Tables Vulnerability Report`
 
 ### What to Include
 
@@ -78,13 +78,19 @@ We will not pursue legal action against researchers who:
 
 ## Security Best Practices
 
-When using Accelade Infolists in your application:
+When using Accelade Tables in your application:
 
 ### XSS Prevention
 
 - Always escape user input in Blade templates using `{{ }}` (not `{!! !!}`)
-- Be cautious when using HtmlEntry or MarkdownEntry with user content
-- Sanitize HTML content before rendering
+- Be cautious when using HTML content in table columns
+- Sanitize HTML content before rendering in columns
+
+### SQL Injection Prevention
+
+- Always use Laravel's query builder or Eloquent when building table queries
+- Never concatenate raw user input into SQL queries
+- Validate sort and filter column names against an allowlist
 
 ### Content Security Policy
 
@@ -97,9 +103,9 @@ $response->headers->set('Content-Security-Policy', "default-src 'self'; script-s
 
 ### Data Validation
 
-- Validate all data before passing to infolist entries
-- Sanitize file paths for ImageEntry
-- Validate URLs before displaying
+- Validate all data before passing to table columns
+- Sanitize file paths for ImageColumn
+- Validate URLs before displaying in columns
 
 ## Vulnerability Disclosure
 
@@ -114,4 +120,4 @@ After a vulnerability has been fixed, we will:
 
 For security-related questions that are not vulnerabilities, please open a regular GitHub issue or discussion.
 
-Thank you for helping keep Accelade Infolists and its users safe!
+Thank you for helping keep Accelade Tables and its users safe!

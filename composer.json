@@ -3,6 +3,12 @@
     "description": "Table components for Accelade - display data in sortable, filterable, and paginated tables",
     "type": "library",
     "license": "MIT",
+    "repositories": [
+        {"type": "path", "url": "../accelade"},
+        {"type": "path", "url": "../query-builder"},
+        {"type": "path", "url": "../filters"},
+        {"type": "path", "url": "../actions"}
+    ],
     "authors": [
         {
             "name": "Fady Mondy",

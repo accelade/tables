@@ -3,9 +3,6 @@
 declare(strict_types=1);
 
 use Accelade\Tables\Columns\CheckboxColumn;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 it('can be created with make', function () {
     $column = CheckboxColumn::make('is_completed');

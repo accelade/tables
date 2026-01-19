@@ -309,7 +309,7 @@ class Column
         }
 
         if ($this->suffix !== null) {
-            $state = $state.$this->suffix;
+            $state .= $this->suffix;
         }
 
         return $state;

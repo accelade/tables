@@ -7,9 +7,6 @@ use Accelade\Tables\Columns\Column;
 use Accelade\Tables\Columns\TextColumn;
 use Accelade\Tables\Table;
 use Illuminate\Support\Facades\View;
-use Tests\TestCase;
-
-uses(TestCase::class);
 
 it('registers the config', function () {
     expect(config('tables.enabled'))->toBeTrue();
