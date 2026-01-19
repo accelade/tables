@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1503300ee46d54accdedc980c28fc4c8",
+    "content-hash": "cf004a97f3112f202a0145773a05c641",
     "packages": [
         {
             "name": "accelade/accelade",
             "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/accelade/accelade.git",
+                "reference": "f326dd6f3db2c101b21c574278abdd89329288f2"
+            },
             "dist": {
-                "type": "path",
-                "url": "../accelade",
-                "reference": "83f2b3a2899b418dbbb5ed68b82dbd4d82a61b64"
+                "type": "zip",
+                "url": "https://api.github.com/repos/accelade/accelade/zipball/f326dd6f3db2c101b21c574278abdd89329288f2",
+                "reference": "f326dd6f3db2c101b21c574278abdd89329288f2",
+                "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-icons": "^1.8",
@@ -32,14 +38,14 @@
             "type": "library",
             "extra": {
                 "laravel": {
+                    "aliases": {
+                        "Icons": "Accelade\\Facades\\Icons",
+                        "Notify": "Accelade\\Facades\\Notify",
+                        "Accelade": "Accelade\\Facades\\Accelade"
+                    },
                     "providers": [
                         "Accelade\\AcceladeServiceProvider"
-                    ],
-                    "aliases": {
-                        "Accelade": "Accelade\\Facades\\Accelade",
-                        "Notify": "Accelade\\Facades\\Notify",
-                        "Icons": "Accelade\\Facades\\Icons"
-                    }
+                    ]
                 }
             },
             "autoload": {
@@ -47,39 +53,7 @@
                     "Accelade\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Accelade\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:coverage": [
-                    "pest --coverage"
-                ],
-                "format": [
-                    "pint"
-                ],
-                "format:test": [
-                    "pint --test"
-                ],
-                "mago": [
-                    "./mago lint src/ || mago lint src/"
-                ],
-                "mago:fix": [
-                    "./mago lint src/ --fix || mago lint src/ --fix"
-                ],
-                "analyse": [
-                    "@format:test",
-                    "@mago"
-                ],
-                "ci": [
-                    "@analyse",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -94,6 +68,7 @@
             "description": "Reactive Blade templates with Vue, React, Svelte, Angular, or vanilla JavaScript",
             "homepage": "https://github.com/fadymondy/accelade",
             "keywords": [
+                "SPA",
                 "angular",
                 "blade",
                 "components",
@@ -101,21 +76,34 @@
                 "notifications",
                 "react",
                 "reactive",
-                "spa",
                 "svelte",
                 "vue"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/accelade/accelade/issues",
+                "source": "https://github.com/accelade/accelade/tree/v1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fadymondy",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-01-19T11:04:03+00:00"
         },
         {
             "name": "accelade/actions",
             "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/accelade/actions.git",
+                "reference": "d68a647a3b85d9888abcae7a4bf20eff666b817e"
+            },
             "dist": {
-                "type": "path",
-                "url": "../actions",
-                "reference": "7400d237fef2997ee13229878aeb55c41b800a94"
+                "type": "zip",
+                "url": "https://api.github.com/repos/accelade/actions/zipball/d68a647a3b85d9888abcae7a4bf20eff666b817e",
+                "reference": "d68a647a3b85d9888abcae7a4bf20eff666b817e",
+                "shasum": ""
             },
             "require": {
                 "accelade/accelade": "^1.0.0",
@@ -126,7 +114,6 @@
                 "php": "^8.2"
             },
             "require-dev": {
-                "blade-ui-kit/blade-heroicons": "^2.6",
                 "laravel/pint": "^1.18",
                 "orchestra/testbench": "^9.0|^10.0",
                 "pestphp/pest": "^3.0",
@@ -135,12 +122,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Accelade\\Actions\\ActionsServiceProvider"
-                    ],
                     "aliases": {
                         "Action": "Accelade\\Actions\\Facades\\Action"
-                    }
+                    },
+                    "providers": [
+                        "Accelade\\Actions\\ActionsServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -148,39 +135,7 @@
                     "Accelade\\Actions\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Accelade\\Actions\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:coverage": [
-                    "pest --coverage"
-                ],
-                "format": [
-                    "pint"
-                ],
-                "format:test": [
-                    "pint --test"
-                ],
-                "mago": [
-                    "./mago lint src/ || mago lint src/"
-                ],
-                "mago:fix": [
-                    "./mago lint src/ --fix || mago lint src/ --fix"
-                ],
-                "analyse": [
-                    "@format:test",
-                    "@mago"
-                ],
-                "ci": [
-                    "@analyse",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -203,17 +158,31 @@
                 "laravel",
                 "modals"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/accelade/actions/issues",
+                "source": "https://github.com/accelade/actions/tree/v1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fadymondy",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-01-18T08:14:15+00:00"
         },
         {
             "name": "accelade/filters",
             "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/accelade/filters.git",
+                "reference": "f5386203cdd9b2e18cdfc06d982c07b73941ad53"
+            },
             "dist": {
-                "type": "path",
-                "url": "../filters",
-                "reference": "6b4256231c3d545707e012c35a175120edd9bf01"
+                "type": "zip",
+                "url": "https://api.github.com/repos/accelade/filters/zipball/f5386203cdd9b2e18cdfc06d982c07b73941ad53",
+                "reference": "f5386203cdd9b2e18cdfc06d982c07b73941ad53",
+                "shasum": ""
             },
             "require": {
                 "accelade/accelade": "^1.0.0",
@@ -233,12 +202,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Accelade\\Filters\\FiltersServiceProvider"
-                    ],
                     "aliases": {
                         "Filter": "Accelade\\Filters\\Facades\\Filter"
-                    }
+                    },
+                    "providers": [
+                        "Accelade\\Filters\\FiltersServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -246,39 +215,7 @@
                     "Accelade\\Filters\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Accelade\\Filters\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:coverage": [
-                    "pest --coverage"
-                ],
-                "format": [
-                    "pint"
-                ],
-                "format:test": [
-                    "pint --test"
-                ],
-                "mago": [
-                    "./mago lint src/ || mago lint src/"
-                ],
-                "mago:fix": [
-                    "./mago lint src/ --fix || mago lint src/ --fix"
-                ],
-                "analyse": [
-                    "@format:test",
-                    "@mago"
-                ],
-                "ci": [
-                    "@analyse",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -301,9 +238,17 @@
                 "search",
                 "tables"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/accelade/filters/issues",
+                "source": "https://github.com/accelade/filters/tree/v1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fadymondy",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-01-19T11:15:16+00:00"
         },
         {
             "name": "accelade/forms",
@@ -384,10 +329,16 @@
         {
             "name": "accelade/query-builder",
             "version": "v1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "../query-builder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/accelade/query-builder.git",
                 "reference": "6f045e39a4cb6d9011ed85ce0ba65280d2a12390"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/accelade/query-builder/zipball/6f045e39a4cb6d9011ed85ce0ba65280d2a12390",
+                "reference": "6f045e39a4cb6d9011ed85ce0ba65280d2a12390",
+                "shasum": ""
             },
             "require": {
                 "accelade/accelade": "^1.0.0",
@@ -404,12 +355,12 @@
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "Accelade\\QueryBuilder\\QueryBuilderServiceProvider"
-                    ],
                     "aliases": {
                         "QueryBuilder": "Accelade\\QueryBuilder\\Facades\\QueryBuilder"
-                    }
+                    },
+                    "providers": [
+                        "Accelade\\QueryBuilder\\QueryBuilderServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -417,39 +368,7 @@
                     "Accelade\\QueryBuilder\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Accelade\\QueryBuilder\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "test": [
-                    "pest"
-                ],
-                "test:coverage": [
-                    "pest --coverage"
-                ],
-                "format": [
-                    "pint"
-                ],
-                "format:test": [
-                    "pint --test"
-                ],
-                "mago": [
-                    "./mago lint src/ || mago lint src/"
-                ],
-                "mago:fix": [
-                    "./mago lint src/ --fix || mago lint src/ --fix"
-                ],
-                "analyse": [
-                    "@format:test",
-                    "@mago"
-                ],
-                "ci": [
-                    "@analyse",
-                    "@test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -473,9 +392,17 @@
                 "query-builder",
                 "sort"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/accelade/query-builder/issues",
+                "source": "https://github.com/accelade/query-builder/tree/v1.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fadymondy",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-01-19T10:25:51+00:00"
         },
         {
             "name": "accelade/schemas",
